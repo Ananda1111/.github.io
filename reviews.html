@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EROSADS Login</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header a span {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        .login-container {
+            max-width: 360px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #facc15;
+        }
+
+        .form-group .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            cursor: pointer;
+        }
+
+        .form-checkbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-checkbox a {
+            color: #facc15;
+            text-decoration: none;
+        }
+
+        .form-checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: #facc15;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: #eab308;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            margin-top: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: #333;
+        }
+
+        .reviews-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .review {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        .review-header {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .review-content {
+            font-size: 14px;
+        }
+
+        .red-text-box {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #ff0000;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .login-container, .reviews-section {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <app-logo>
+            <a href="/" class="inline-block text-[30px] text-white cursor-pointer leading-6">
+                <span class="text-accent">EROS</span>ADS
+            </a>
+        </app-logo>
+    </header>
+
+    <!-- Reviews Section -->
+    <div class="reviews-section">
+        <h2>User Reviews</h2>
+
+        <h2 class="red-text-box">THANKS FOR DELETING BAD REVIEWS</h2>
+
+        <div class="review">
+            <div class="review-header">Thu. Sep. 26 - Jackrois12</div>
+            <div class="review-content">ANANDA</div>
+        </div>
+
+        <div class="review">
+            <div class="review-header">Fri. Sep. 20 - Allegit0nothing</div>
+            <div class="review-content">Damn so hot</div>
+        </div>
+
+        <div class="review">
+            <div class="review-header">Thu. Sep. 19 - kingofpower1</div>
+            <div class="review-content">love it I want to meet you again</div>
+        </div>
+        <div class="review">
+            <div class="review-header">Wed. Aug. 14 - Trestaxxs</div>
+            <div class="review-content">She the truth seen her yesterday she is a must see</div>
+        </div>
+        <div class="review">
+            <div class="review-header">Sun. Aug. 4 - Huggybear 721</div>
+            <div class="review-content">She is legit. I met her a few months ago 410 area a few months ago.</div>
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>

